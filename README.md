@@ -10,7 +10,7 @@
 
 # Blasp - Advanced Profanity Filter for Laravel
 
-Blasp is a powerful, extensible profanity filter package for Laravel that helps detect and mask profane words in text. Version 3.0 introduces a simplified API with method chaining, comprehensive multi-language support (English, Spanish, German, French), all-languages detection mode, and advanced caching for enterprise-grade performance.
+Blasp is a powerful, extensible profanity filter package for Laravel that helps detect and mask profane words in text. Version 3.0 introduces a simplified API with method chaining, comprehensive multi-language support (English, Spanish, German, French, Persian), all-languages detection mode, and advanced caching for enterprise-grade performance.
 
 ## ✨ Key Features
 
@@ -147,7 +147,7 @@ php artisan vendor:publish --tag="blasp-languages"
 
 This will publish:
 - `config/blasp.php` - Main configuration with default language settings
-- `config/languages/` - Language-specific profanity lists (English, Spanish, German, French)
+- `config/languages/` - Language-specific profanity lists (English, Spanish, German, French, Persian)
 
 ### Custom Configuration
 
@@ -189,6 +189,7 @@ Blasp includes comprehensive support for multiple languages with automatic chara
 - **Spanish**: Handles accent normalization (á→a, ñ→n)
 - **German**: Processes umlauts (ä→ae, ö→oe, ü→ue) and ß→ss
 - **French**: Accent and cedilla normalization
+- **Persian**: Combined phrase and normalization
 
 
 ### Complete Chainable Methods Reference
@@ -200,6 +201,7 @@ Blasp::english()               // Shortcut for English
 Blasp::spanish()               // Shortcut for Spanish
 Blasp::german()                // Shortcut for German
 Blasp::french()                // Shortcut for French
+Blasp::persian()                // Shortcut for Persian
 Blasp::allLanguages()          // Check against all languages
 
 // Configuration methods
